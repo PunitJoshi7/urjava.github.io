@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=submit] {
+            background-color: #161F6D;
+            border-radius: 20px;
+            color: white;
+            padding: 28px 45px;
+            text-decoration: dotted;
+            cursor: pointer;
+            text-align: center;
+            size: 100px;
+            font-size: x-large;
+
+        }
+
+        input[type=button] {
+            background-color: #161F6D;
+            border-radius: 15px;
+            color: white;
+            padding: 8px 5px;
+            text-decoration: dotted;
+            cursor: pointer;
+            text-align: center;
+            size: 20px;
+            font-size: 20px;
+
+        }
+
+        body {
+            text-align: left;
+            text-shadow: 45px;
+            background-color: #a5e8a7;
+            font-size: 20px;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #123C69;
+
+            /* Needed to position the navbar */
+            position: relative;
+            min-height: 900px;
+            border: black;
+            border-style: solid;
+
+            
+        }
+
+        details {
+            padding: 10px;
+            font-size: 28px;
+            color: black;
+            font-weight: 300;
+            color: #123C69;
+            background-color: bisque;
+        }
+
+        div {
+            border: 70px 70px 70px 70px;
+            border-color: #1F2;
+            padding: 10px;
+            background-color: rgb(52, 191, 92);
+            color: white;
+            margin-top: 40px;
+            margin-left: 40px;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: small;
+        }
+
+        h2{
+            background-color: azure;
+            color: rgba(242, 5, 5, 0.9);
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+
+    <center><h2><b> <u>MULTITHREADING</u></b></h2></center>
+
+    <details>
+
+        <summary>CLICK HERE TO SEE THE ENTIRE PROGRAM LIST..</summary>
+        <hr>
+        <div>
+    <details>
+        <summary>
+           
+            Java program to display some text in the frame using labels .
+        </summary>
+
+        <div>
+            <pre>
+                <center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="/images/alter.png" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>
+
+
+    <details>
+        <summary>
+            Java program to create the text area and password field..
+        </summary>
+           
+           
+
+        <div>
+            <pre>
+                import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class TextAreaPasswordFieldExample extends JFrame {
+
+    private JTextArea textArea;
+    private JPasswordField passwordField;
+
+    public TextAreaPasswordFieldExample() {
+        // Set the title of the frame
+        setTitle("Text Area and Password Field Example");
+
+        // Create a panel to hold components
+        JPanel panel = new JPanel();
+
+        // Create a text area
+        textArea = new JTextArea(5, 20);
+        JScrollPane textAreaScrollPane = new JScrollPane(textArea);
+        panel.add(textAreaScrollPane);
+
+        // Create a password field
+        JLabel passwordLabel = new JLabel("Password:");
+        passwordField = new JPasswordField(20);
+        panel.add(passwordLabel);
+        panel.add(passwordField);
+
+        // Create a button to display the entered values
+        JButton displayButton = new JButton("Display Values");
+        displayButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                displayValues();
+            }
+        });
+        panel.add(displayButton);
+
+        // Add the panel to the frame
+        add(panel, BorderLayout.CENTER);
+
+        // Set the size of the frame
+        setSize(400, 200);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set the frame to be visible
+        setVisible(true);
+    }
+
+    private void displayValues() {
+        String textAreaValue = textArea.getText();
+        char[] passwordFieldValue = passwordField.getPassword();
+
+        System.out.println("Text Area Value: " + textAreaValue);
+        System.out.println("Password Field Value: " + new String(passwordFieldValue));
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the TextAreaPasswordFieldExample class
+        TextAreaPasswordFieldExample frame = new TextAreaPasswordFieldExample();
+    }
+}
+
+
+
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>
+
+
+    <details>
+        <summary>
+            Java program to create a button and display image in the frame when clicked.
+           
+           
+        </summary>
+
+        <div>
+            <pre>
+                import javax.swing.JButton;
+                import javax.swing.JFrame;
+                import javax.swing.ImageIcon;
+                import javax.swing.JLabel;
+                import java.awt.event.ActionEvent;
+                import java.awt.event.ActionListener;
+                
+                public class ImageDisplayExample extends JFrame {
+                
+                    public ImageDisplayExample() {
+                        // Set the title of the frame
+                        setTitle("Image Display Example");
+                
+                        // Create a button
+                        JButton displayButton = new JButton("Display Image");
+                
+                        // Create a label to display the image
+                        JLabel imageLabel = new JLabel();
+                
+                        // Load the image icon
+                        ImageIcon imageIcon = new ImageIcon("path/to/your/image.jpg"); // Replace with the actual path to your image
+                
+                        // Set the default close operation
+                        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                
+                        // Set the layout to null for absolute positioning
+                        setLayout(null);
+                
+                        // Set the bounds for the button
+                        displayButton.setBounds(150, 10, 150, 30);
+                
+                        // Set the bounds for the label
+                        imageLabel.setBounds(10, 50, 400, 300);
+                
+                        // Add action listener to the button
+                        displayButton.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                // Display the image when the button is clicked
+                                imageLabel.setIcon(imageIcon);
+                            }
+                        });
+                
+                        // Add components to the frame
+                        add(displayButton);
+                        add(imageLabel);
+                
+                        // Set the size of the frame
+                        setSize(500, 400);
+                
+                        // Set the frame to be visible
+                        setVisible(true);
+                    }
+                
+                    public static void main(String[] args) {
+                        // Create an instance of the ImageDisplayExample class
+                        ImageDisplayExample frame = new ImageDisplayExample();
+                    }
+                }
+                
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>    <details>
+        <summary>
+          Java program to create and Set Border to Push Buttons.
+           
+           
+        </summary>
+
+        <div>
+            <pre>
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.LineBorder;
+import javax.swing.border.SoftBevelBorder;
+import java.awt.Color;
+
+public class ButtonBorderExample {
+
+    public ButtonBorderExample() {
+        // Create the frame
+        JFrame frame = new JFrame("Button Border Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create buttons
+        JButton button1 = new JButton("Button 1");
+        JButton button2 = new JButton("Button 2");
+
+        // Set different borders to buttons
+        button1.setBorder(new LineBorder(Color.RED, 2)); // Line border with red color
+        button2.setBorder(new SoftBevelBorder(BevelBorder.RAISED, Color.BLUE, Color.GREEN)); // Soft bevel border with blue and green colors
+
+        // Add buttons to the frame
+        frame.add(button1);
+        frame.add(button2);
+
+        // Set the layout to null for absolute positioning
+        frame.setLayout(null);
+
+        // Set the bounds for buttons
+        button1.setBounds(50, 50, 150, 30);
+        button2.setBounds(50, 100, 150, 30);
+
+        // Set the size of the frame
+        frame.setSize(300, 200);
+
+        // Set the frame to be visible
+        frame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the ButtonBorderExample class
+        ButtonBorderExample example = new ButtonBorderExample();
+    }
+}
+
+
+
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>    <details>
+        <summary>
+            Java program to handle keyboard event.
+           
+           
+        </summary>
+
+        <div>
+            <pre>
+                import javax.swing.*;
+                import java.awt.event.KeyEvent;
+                import java.awt.event.KeyListener;
+                
+                public class KeyboardEventExample extends JFrame {
+                
+                    public KeyboardEventExample() {
+                        // Set the title of the frame
+                        setTitle("Keyboard Event Example");
+                
+                        // Set the default close operation
+                        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                
+                        // Create a label to display the pressed keys
+                        JLabel label = new JLabel("Press a key...");
+                        label.setHorizontalAlignment(SwingConstants.CENTER);
+                
+                        // Add a KeyListener to the label
+                        label.addKeyListener(new KeyListener() {
+                            @Override
+                            public void keyTyped(KeyEvent e) {
+                                // Invoked when a key is typed (pressed and released)
+                                System.out.println("Key Typed: " + e.getKeyChar());
+                            }
+                
+                            @Override
+                            public void keyPressed(KeyEvent e) {
+                                // Invoked when a key is pressed
+                                System.out.println("Key Pressed: " + e.getKeyCode());
+                            }
+                
+                            @Override
+                            public void keyReleased(KeyEvent e) {
+                                // Invoked when a key is released
+                                System.out.println("Key Released: " + e.getKeyCode());
+                            }
+                        });
+                
+                        // Set the label to be focusable so that it can receive keyboard events
+                        label.setFocusable(true);
+                
+                        // Add the label to the frame
+                        add(label);
+                
+                        // Set the size of the frame
+                        setSize(300, 150);
+                
+                        // Set the frame to be visible
+                        setVisible(true);
+                    }
+                
+                    public static void main(String[] args) {
+                        // Create an instance of the KeyboardEventExample class
+                        KeyboardEventExample frame = new KeyboardEventExample();
+                    }
+                }
+                
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>    <details>
+        <summary>
+            Java program to handle mouse event.
+
+           
+           
+        </summary>
+
+        <div>
+            <pre>
+                import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+public class MouseEventExample extends JFrame {
+
+    public MouseEventExample() {
+        // Set the title of the frame
+        setTitle("Mouse Event Example");
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a label to display mouse event information
+        JLabel label = new JLabel("Mouse Events");
+        label.setHorizontalAlignment(SwingConstants.CENTER);
+
+        // Add a MouseListener to the label
+        label.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("Mouse Clicked: " + e.getPoint());
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                System.out.println("Mouse Pressed: " + e.getPoint());
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                System.out.println("Mouse Released: " + e.getPoint());
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                System.out.println("Mouse Entered");
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                System.out.println("Mouse Exited");
+            }
+        });
+
+        // Add a MouseMotionListener to the label
+        label.addMouseMotionListener(new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                System.out.println("Mouse Dragged: " + e.getPoint());
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                System.out.println("Mouse Moved: " + e.getPoint());
+            }
+        });
+
+        // Set the label to be focusable so that it can receive mouse events
+        label.setFocusable(true);
+
+        // Add the label to the frame
+        add(label);
+
+        // Set the size of the frame
+        setSize(300, 150);
+
+        // Set the frame to be visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the MouseEventExample class
+        MouseEventExample frame = new MouseEventExample();
+    }
+}
+
+
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>    <details>
+        <summary>
+            Java program ot get and set state and get label of a checkbox.
+           
+           
+        </summary>
+
+        <div>
+            <pre>
+                import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CheckboxExample extends JFrame {
+
+    private JCheckBox checkBox;
+    private JLabel resultLabel;
+
+    public CheckboxExample() {
+        // Set the title of the frame
+        setTitle("Checkbox Example");
+
+        // Create a checkbox
+        checkBox = new JCheckBox("Enable Feature");
+
+        // Create a label to display the result
+        resultLabel = new JLabel("Checkbox State: " + checkBox.isSelected());
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set the layout to null for absolute positioning
+        setLayout(null);
+
+        // Set the bounds for the checkbox
+        checkBox.setBounds(10, 10, 150, 30);
+
+        // Set the bounds for the label
+        resultLabel.setBounds(10, 50, 200, 30);
+
+        // Add an ActionListener to the checkbox
+        checkBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                updateResultLabel();
+            }
+        });
+
+        // Add components to the frame
+        add(checkBox);
+        add(resultLabel);
+
+        // Set the size of the frame
+        setSize(250, 120);
+
+        // Set the frame to be visible
+        setVisible(true);
+    }
+
+    private void updateResultLabel() {
+        // Update the label with the current state of the checkbox
+        resultLabel.setText("Checkbox State: " + checkBox.isSelected());
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the CheckboxExample class
+        CheckboxExample frame = new CheckboxExample();
+    }
+}
+
+
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>    <details>
+        <summary>
+            Java program to create checkboxes and radio buttons.
+           
+           
+        </summary>
+
+        <div>
+            <pre>
+                import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CheckBoxRadioButtonExample extends JFrame {
+
+    private JCheckBox javaCheckbox, pythonCheckbox, cppCheckbox;
+    private JRadioButton option1Radio, option2Radio, option3Radio;
+    private JButton submitButton;
+
+    public CheckBoxRadioButtonExample() {
+        // Set the title of the frame
+        setTitle("Checkbox and Radio Button Example");
+
+        // Create checkboxes
+        javaCheckbox = new JCheckBox("Java");
+        pythonCheckbox = new JCheckBox("Python");
+        cppCheckbox = new JCheckBox("C++");
+
+        // Create radio buttons
+        option1Radio = new JRadioButton("Option 1");
+        option2Radio = new JRadioButton("Option 2");
+        option3Radio = new JRadioButton("Option 3");
+
+        // Create a button group for radio buttons
+        ButtonGroup radioGroup = new ButtonGroup();
+        radioGroup.add(option1Radio);
+        radioGroup.add(option2Radio);
+        radioGroup.add(option3Radio);
+
+        // Create a submit button
+        submitButton = new JButton("Submit");
+
+        // Create a label to display the selected options
+        JLabel resultLabel = new JLabel("Selected Options:");
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a panel to hold components
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
+
+        // Set the bounds for checkboxes and radio buttons
+        javaCheckbox.setBounds(10, 10, 80, 20);
+        pythonCheckbox.setBounds(10, 40, 80, 20);
+        cppCheckbox.setBounds(10, 70, 80, 20);
+
+        option1Radio.setBounds(120, 10, 100, 20);
+        option2Radio.setBounds(120, 40, 100, 20);
+        option3Radio.setBounds(120, 70, 100, 20);
+
+        submitButton.setBounds(10, 110, 100, 30);
+        resultLabel.setBounds(120, 110, 200, 30);
+
+        // Add action listener to the submit button
+        submitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                updateResultLabel();
+            }
+        });
+
+        // Add components to the panel
+        panel.add(javaCheckbox);
+        panel.add(pythonCheckbox);
+        panel.add(cppCheckbox);
+        panel.add(option1Radio);
+        panel.add(option2Radio);
+        panel.add(option3Radio);
+        panel.add(submitButton);
+        panel.add(resultLabel);
+
+        // Add the panel to the frame
+        add(panel);
+
+        // Set the size of the frame
+        setSize(350, 200);
+
+        // Set the frame to be visible
+        setVisible(true);
+    }
+
+    private void updateResultLabel() {
+        // Build a string with the selected options
+        StringBuilder selectedOptions = new StringBuilder("Selected Options:");
+
+        if (javaCheckbox.isSelected()) {
+            selectedOptions.append(" Java");
+        }
+        if (pythonCheckbox.isSelected()) {
+            selectedOptions.append(" Python");
+        }
+        if (cppCheckbox.isSelected()) {
+            selectedOptions.append(" C++");
+        }
+
+        if (option1Radio.isSelected()) {
+            selectedOptions.append(" Option 1");
+        } else if (option2Radio.isSelected()) {
+            selectedOptions.append(" Option 2");
+        } else if (option3Radio.isSelected()) {
+            selectedOptions.append(" Option 3");
+        }
+
+        // Update the label with the selected options
+        JLabel resultLabel = (JLabel) getContentPane().getComponent(0).getComponent(6);
+        resultLabel.setText(selectedOptions.toString());
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the CheckBoxRadioButtonExample class
+        CheckBoxRadioButtonExample frame = new CheckBoxRadioButtonExample();
+    }
+}
+
+
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>    <details>
+        <summary>
+            Java program to create and switch between the frames using the button.
+           
+           
+        </summary>
+
+        <div>
+            <pre>
+                import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class FrameSwitchingExample {
+
+    private JFrame frame1, frame2;
+
+    public FrameSwitchingExample() {
+        // Create the first frame
+        frame1 = new JFrame("Frame 1");
+        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a button on the first frame
+        JButton switchButton = new JButton("Switch to Frame 2");
+        switchButton.setBounds(50, 50, 150, 30);
+
+        // Add an ActionListener to the button
+        switchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Switch to the second frame when the button is clicked
+                switchToFrame2();
+            }
+        });
+
+        // Add the button to the first frame
+        frame1.add(switchButton);
+
+        // Set the size of the first frame
+        frame1.setSize(250, 150);
+
+        // Set the frame to be visible
+        frame1.setLayout(null);
+        frame1.setVisible(true);
+    }
+
+    private void switchToFrame2() {
+        // Create the second frame
+        frame2 = new JFrame("Frame 2");
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a button on the second frame
+        JButton backButton = new JButton("Back to Frame 1");
+        backButton.setBounds(50, 50, 150, 30);
+
+        // Add an ActionListener to the button
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Switch back to the first frame when the button is clicked
+                switchToFrame1();
+            }
+        });
+
+        // Add the button to the second frame
+        frame2.add(backButton);
+
+        // Set the size of the second frame
+        frame2.setSize(250, 150);
+
+        // Set the frame to be visible
+        frame2.setLayout(null);
+        frame1.setVisible(false);
+        frame2.setVisible(true);
+    }
+
+    private void switchToFrame1() {
+        // Dispose of the second frame and show the first frame
+        frame2.dispose();
+        frame1.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the FrameSwitchingExample class
+        FrameSwitchingExample example = new FrameSwitchingExample();
+    }
+}
+
+
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>    <details>
+        <summary>
+            Java program to display the message in the new frame .
+           
+           
+        </summary>
+
+        <div>
+            <pre>
+                import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class NewFrameMessageExample {
+
+    public NewFrameMessageExample() {
+        // Create the main frame
+        JFrame mainFrame = new JFrame("Main Frame");
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a button on the main frame
+        JButton showMessageButton = new JButton("Show Message");
+
+        // Add an ActionListener to the button
+        showMessageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Show a message in a new frame when the button is clicked
+                showMessageInNewFrame("Hello, this is a message in a new frame!");
+            }
+        });
+
+        // Add the button to the main frame
+        mainFrame.add(showMessageButton);
+
+        // Set the layout to null for absolute positioning
+        mainFrame.setLayout(null);
+
+        // Set the bounds for the button
+        showMessageButton.setBounds(50, 50, 150, 30);
+
+        // Set the size of the main frame
+        mainFrame.setSize(300, 200);
+
+        // Set the main frame to be visible
+        mainFrame.setVisible(true);
+    }
+
+    private void showMessageInNewFrame(String message) {
+        // Create a new frame
+        JFrame newFrame = new JFrame("New Frame");
+        newFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        // Show the message in the new frame using JOptionPane
+        JOptionPane.showMessageDialog(newFrame, message);
+
+        // Set the layout to null for absolute positioning
+        newFrame.setLayout(null);
+
+        // Set the size of the new frame
+        newFrame.setSize(300, 150);
+
+        // Set the new frame to be visible
+        newFrame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the NewFrameMessageExample class
+        NewFrameMessageExample example = new NewFrameMessageExample();
+    }
+}
+
+
+                
+      
+ 
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+            </pre>
+        </div>
+    </details>
+    <hr>
+    <hr>
+
+    </div>
+    </details>
+    
+
+    <center><h2><b> <u>OBJECT ORIENTED PROGRAMMING</u></b></h2></center>
+
+
+
+
+    <details>
+
+        <summary>CLICK HERE TO SEE THE ENTIRE PROGRAM LIST..</summary>
+        <hr>
+        <div>
+
+     <details>
+       
+            <summary>
+                Write a Java program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    public class Person {
+                        private String name;
+                        private int age;
+                    
+                        // Constructor to initialize the attributes
+                        public Person(String name, int age) {
+                            this.name = name;
+                            this.age = age;
+                        }
+                    
+                        // Getter method for name
+                        public String getName() {
+                            return name;
+                        }
+                    
+                        // Getter method for age
+                        public int getAge() {
+                            return age;
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create two instances of the Person class
+                            Person person1 = new Person("John", 25);
+                            Person person2 = new Person("Alice", 30);
+                    
+                            // Print information about the first person
+                            System.out.println("Person 1 - Name: " + person1.getName() + ", Age: " + person1.getAge());
+                    
+                            // Print information about the second person
+                            System.out.println("Person 2 - Name: " + person2.getName() + ", Age: " + person2.getAge());
+                        }
+                    }
+                    
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    Person 1 - Name: John, Age: 25
+    Person 2 - Name: Alice, Age: 30
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr>
+    
+        <details>
+            <summary>
+                Write a Java program to create a class called "Dog" with a name and breed attribute. Create two instances of the "Dog" class, set their attributes using the constructor and modify the attributes using the setter methods and print the updated values.
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    public class Dog {
+                        private String name;
+                        private String breed;
+                    
+                        // Constructor to initialize the attributes
+                        public Dog(String name, String breed) {
+                            this.name = name;
+                            this.breed = breed;
+                        }
+                    
+                        // Getter method for name
+                        public String getName() {
+                            return name;
+                        }
+                    
+                        // Getter method for breed
+                        public String getBreed() {
+                            return breed;
+                        }
+                    
+                        // Setter method for name
+                        public void setName(String name) {
+                            this.name = name;
+                        }
+                    
+                        // Setter method for breed
+                        public void setBreed(String breed) {
+                            this.breed = breed;
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create two instances of the Dog class
+                            Dog dog1 = new Dog("Buddy", "Golden Retriever");
+                            Dog dog2 = new Dog("Max", "Labrador");
+                    
+                            // Print information about the dogs before modification
+                            System.out.println("Dog 1 - Name: " + dog1.getName() + ", Breed: " + dog1.getBreed());
+                            System.out.println("Dog 2 - Name: " + dog2.getName() + ", Breed: " + dog2.getBreed());
+                    
+                            // Modify the attributes using setter methods
+                            dog1.setName("Charlie");
+                            dog2.setBreed("German Shepherd");
+                    
+                            // Print updated information about the dogs
+                            System.out.println("\nAfter Modification:");
+                            System.out.println("Dog 1 - Name: " + dog1.getName() + ", Breed: " + dog1.getBreed());
+                            System.out.println("Dog 2 - Name: " + dog2.getName() + ", Breed: " + dog2.getBreed());
+                        }
+                    }
+                    
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+Dog 1 - Name: Buddy, Breed: Golden Retriever
+Dog 2 - Name: Max, Breed: Labrador
+
+After Modification:
+Dog 1 - Name: Charlie, Breed: Golden Retriever
+Dog 2 - Name: Max, Breed: German Shepherd
+
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr>
+    
+        <details>
+            <summary>
+                Write a Java program to create a class called "Rectangle" with width and height attributes. Calculate the area and perimeter of the rectangle.
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    public class Rectangle {
+                        private double width;
+                        private double height;
+                    
+                        // Constructor to initialize the attributes
+                        public Rectangle(double width, double height) {
+                            this.width = width;
+                            this.height = height;
+                        }
+                    
+                        // Method to calculate the area of the rectangle
+                        public double calculateArea() {
+                            return width * height;
+                        }
+                    
+                        // Method to calculate the perimeter of the rectangle
+                        public double calculatePerimeter() {
+                            return 2 * (width + height);
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create an instance of the Rectangle class
+                            Rectangle rectangle = new Rectangle(5.0, 8.0);
+                    
+                            // Calculate and print the area of the rectangle
+                            double area = rectangle.calculateArea();
+                            System.out.println("Area of the rectangle: " + area);
+                    
+                            // Calculate and print the perimeter of the rectangle
+                            double perimeter = rectangle.calculatePerimeter();
+                            System.out.println("Perimeter of the rectangle: " + perimeter);
+                        }
+                    }
+                    
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Area of the rectangle: 40.0
+Perimeter of the rectangle: 26.0
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr>
+    
+        <details>
+            <summary>
+                Write a Java program to create a class called "Circle" with a radius attribute. You can access and modify this attribute. Calculate the area and circumference of the circle.
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    public class Circle {
+                        private double radius;
+                    
+                        // Constructor to initialize the radius attribute
+                        public Circle(double radius) {
+                            this.radius = radius;
+                        }
+                    
+                        // Getter method for the radius
+                        public double getRadius() {
+                            return radius;
+                        }
+                    
+                        // Setter method for the radius
+                        public void setRadius(double radius) {
+                            this.radius = radius;
+                        }
+                    
+                        // Method to calculate the area of the circle
+                        public double calculateArea() {
+                            return Math.PI * radius * radius;
+                        }
+                    
+                        // Method to calculate the circumference of the circle
+                        public double calculateCircumference() {
+                            return 2 * Math.PI * radius;
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create an instance of the Circle class with a radius of 3.0
+                            Circle circle = new Circle(3.0);
+                    
+                            // Access and print the initial radius of the circle
+                            System.out.println("Initial Radius: " + circle.getRadius());
+                    
+                            // Calculate and print the initial area of the circle
+                            double initialArea = circle.calculateArea();
+                            System.out.println("Initial Area: " + initialArea);
+                    
+                            // Calculate and print the initial circumference of the circle
+                            double initialCircumference = circle.calculateCircumference();
+                            System.out.println("Initial Circumference: " + initialCircumference);
+                    
+                            // Modify the radius of the circle
+                            circle.setRadius(5.0);
+                    
+                            // Access and print the modified radius of the circle
+                            System.out.println("\nModified Radius: " + circle.getRadius());
+                    
+                            // Calculate and print the modified area of the circle
+                            double modifiedArea = circle.calculateArea();
+                            System.out.println("Modified Area: " + modifiedArea);
+                    
+                            // Calculate and print the modified circumference of the circle
+                            double modifiedCircumference = circle.calculateCircumference();
+                            System.out.println("Modified Circumference: " + modifiedCircumference);
+                        }
+                    }
+                    
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Initial Radius: 3.0
+Initial Area: 28.274333882308138
+Initial Circumference: 18.84955592153876
+
+Modified Radius: 5.0
+Modified Area: 78.53981633974483
+Modified Circumference: 31.41592653589793
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr>
+    
+        <details>
+            <summary>
+                Write a Java program to create a class called "Book" with attributes for title, author, and ISBN, and methods to add and remove books from a collection
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Book {
+    private String title;
+    private String author;
+    private String isbn;
+
+    // Constructor to initialize the attributes
+    public Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+
+    // Getter methods for title, author, and ISBN
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    // Method to display book information
+    public void displayBookInfo() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("ISBN: " + isbn);
+        System.out.println();
+    }
+
+    public static class BookCollection {
+        private List<Book> books;
+
+        // Constructor to initialize the book collection
+        public BookCollection() {
+            books = new ArrayList<>();
+        }
+
+        // Method to add a book to the collection
+        public void addBook(Book book) {
+            books.add(book);
+            System.out.println("Book added to the collection.");
+        }
+
+        // Method to remove a book from the collection based on ISBN
+        public void removeBook(String isbn) {
+            Iterator<Book> iterator = books.iterator();
+            while (iterator.hasNext()) {
+                Book book = iterator.next();
+                if (book.getIsbn().equals(isbn)) {
+                    iterator.remove();
+                    System.out.println("Book removed from the collection.");
+                    return;
+                }
+            }
+            System.out.println("Book with ISBN " + isbn + " not found in the collection.");
+        }
+
+        // Method to display all books in the collection
+        public void displayAllBooks() {
+            if (books.isEmpty()) {
+                System.out.println("The collection is empty.");
+            } else {
+                System.out.println("Books in the collection:");
+                for (Book book : books) {
+                    book.displayBookInfo();
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a BookCollection
+        BookCollection collection = new BookCollection();
+
+        // Add books to the collection
+        Book book1 = new Book("Java Programming", "John Doe", "123456789");
+        Book book2 = new Book("Python Basics", "Jane Smith", "987654321");
+
+        collection.addBook(book1);
+        collection.addBook(book2);
+
+        // Display all books in the collection
+        System.out.println("Books in the collection after adding:");
+        collection.displayAllBooks();
+
+        // Remove a book from the collection
+        collection.removeBook("123456789");
+
+        // Display all books in the collection after removal
+        System.out.println("\nBooks in the collection after removal:");
+        collection.displayAllBooks();
+    }
+}
+
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Book added to the collection.
+Book added to the collection.
+Books in the collection after adding:
+Title: Java Programming
+Author: John Doe
+ISBN: 123456789
+
+Title: Python Basics
+Author: Jane Smith
+ISBN: 987654321
+
+Book removed from the collection.
+
+Books in the collection after removal:
+Title: Python Basics
+Author: Jane Smith
+ISBN: 987654321
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr>
+        <details>
+            <summary>
+                Write a Java program to create a class called "Employee" with a name, job title, and salary attributes, and methods to calculate and update salary.
+
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    public class Employee {
+                        private String name;
+                        private String jobTitle;
+                        private double salary;
+                    
+                        // Constructor to initialize the attributes
+                        public Employee(String name, String jobTitle, double salary) {
+                            this.name = name;
+                            this.jobTitle = jobTitle;
+                            this.salary = salary;
+                        }
+                    
+                        // Getter methods for name, job title, and salary
+                        public String getName() {
+                            return name;
+                        }
+                    
+                        public String getJobTitle() {
+                            return jobTitle;
+                        }
+                    
+                        public double getSalary() {
+                            return salary;
+                        }
+                    
+                        // Method to calculate annual salary
+                        public double calculateAnnualSalary() {
+                            return salary * 12; // Assuming salary is monthly
+                        }
+                    
+                        // Method to update the salary
+                        public void updateSalary(double percentageIncrease) {
+                            if (percentageIncrease > 0) {
+                                double increaseAmount = salary * (percentageIncrease / 100);
+                                salary += increaseAmount;
+                                System.out.println("Salary updated successfully. New salary: " + salary);
+                            } else {
+                                System.out.println("Invalid percentage increase. Salary remains unchanged.");
+                            }
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create an instance of the Employee class
+                            Employee employee = new Employee("John Doe", "Software Engineer", 5000.0);
+                    
+                            // Display initial information about the employee
+                            System.out.println("Employee Information:");
+                            System.out.println("Name: " + employee.getName());
+                            System.out.println("Job Title: " + employee.getJobTitle());
+                            System.out.println("Monthly Salary: $" + employee.getSalary());
+                            System.out.println("Annual Salary: $" + employee.calculateAnnualSalary());
+                            System.out.println();
+                    
+                            // Update the salary with a 10% increase
+                            employee.updateSalary(10);
+                    
+                            // Display updated information about the employee
+                            System.out.println("\nEmployee Information after Salary Update:");
+                            System.out.println("Name: " + employee.getName());
+                            System.out.println("Job Title: " + employee.getJobTitle());
+                            System.out.println("Monthly Salary: $" + employee.getSalary());
+                            System.out.println("Annual Salary: $" + employee.calculateAnnualSalary());
+                        }
+                    }
+                    
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Employee Information:
+Name: John Doe
+Job Title: Software Engineer
+Monthly Salary: $5000.0
+Annual Salary: $60000.0
+
+Salary updated successfully. New salary: 5500.0
+
+Employee Information after Salary Update:
+Name: John Doe
+Job Title: Software Engineer
+Monthly Salary: $5500.0
+Annual Salary: $66000.0
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+                Write a Java program to create a class called "Bank" with a collection of accounts and methods to add and remove accounts, and to deposit and withdraw money. Also define a class called "Account" to maintain account details of a particular customer.
+
+
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Bank {
+    private List<Account> accounts;
+
+    // Constructor to initialize the accounts collection
+    public Bank() {
+        accounts = new ArrayList<>();
+    }
+
+    // Method to add an account to the collection
+    public void addAccount(Account account) {
+        accounts.add(account);
+        System.out.println("Account added successfully.");
+    }
+
+    // Method to remove an account from the collection based on account number
+    public void removeAccount(int accountNumber) {
+        Iterator<Account> iterator = accounts.iterator();
+        while (iterator.hasNext()) {
+            Account account = iterator.next();
+            if (account.getAccountNumber() == accountNumber) {
+                iterator.remove();
+                System.out.println("Account removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Account with Account Number " + accountNumber + " not found.");
+    }
+
+    // Method to display all accounts in the collection
+    public void displayAllAccounts() {
+        if (accounts.isEmpty()) {
+            System.out.println("The bank has no accounts.");
+        } else {
+            System.out.println("Accounts in the bank:");
+            for (Account account : accounts) {
+                account.displayAccountInfo();
+            }
+        }
+    }
+
+    public static class Account {
+        private int accountNumber;
+        private String accountHolder;
+        private double balance;
+
+        // Constructor to initialize the account details
+        public Account(int accountNumber, String accountHolder, double balance) {
+            this.accountNumber = accountNumber;
+            this.accountHolder = accountHolder;
+            this.balance = balance;
+        }
+
+        // Getter methods for account number, account holder, and balance
+        public int getAccountNumber() {
+            return accountNumber;
+        }
+
+        public String getAccountHolder() {
+            return accountHolder;
+        }
+
+        public double getBalance() {
+            return balance;
+        }
+
+        // Method to display account information
+        public void displayAccountInfo() {
+            System.out.println("Account Number: " + accountNumber);
+            System.out.println("Account Holder: " + accountHolder);
+            System.out.println("Balance: $" + balance);
+            System.out.println();
+        }
+
+        // Method to deposit money into the account
+        public void deposit(double amount) {
+            if (amount > 0) {
+                balance += amount;
+                System.out.println("Deposit successful. New balance: $" + balance);
+            } else {
+                System.out.println("Invalid deposit amount. Balance remains unchanged.");
+            }
+        }
+
+        // Method to withdraw money from the account
+        public void withdraw(double amount) {
+            if (amount > 0 && amount <= balance) {
+                balance -= amount;
+                System.out.println("Withdrawal successful. New balance: $" + balance);
+            } else {
+                System.out.println("Invalid withdrawal amount or insufficient balance. Balance remains unchanged.");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a Bank
+        Bank bank = new Bank();
+
+        // Add accounts to the bank
+        Account account1 = new Account(1001, "John Doe", 5000.0);
+        Account account2 = new Account(1002, "Jane Smith", 8000.0);
+
+        bank.addAccount(account1);
+        bank.addAccount(account2);
+
+        // Display all accounts in the bank
+        System.out.println("Accounts in the bank after adding:");
+        bank.displayAllAccounts();
+
+        // Deposit and withdraw from an account
+        account1.deposit(1000.0);
+        account2.withdraw(2000.0);
+
+        // Display all accounts in the bank after transactions
+        System.out.println("\nAccounts in the bank after transactions:");
+        bank.displayAllAccounts();
+
+        // Remove an account from the bank
+        bank.removeAccount(1001);
+
+        // Display all accounts in the bank after removal
+        System.out.println("\nAccounts in the bank after removal:");
+        bank.displayAllAccounts();
+    }
+}
+
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Account added successfully.
+Account added successfully.
+Accounts in the bank after adding:
+Account Number: 1001
+Account Holder: John Doe
+Balance: $5000.0
+
+Account Number: 1002
+Account Holder: Jane Smith
+Balance: $8000.0
+
+Deposit successful. New balance: $6000.0
+Withdrawal successful. New balance: $6000.0
+
+Accounts in the bank after transactions:
+Account Number: 1001
+Account Holder: John Doe
+Balance: $6000.0
+
+Account Number: 1002
+Account Holder: Jane Smith
+Balance: $6000.0
+
+Account removed successfully.
+
+Accounts in the bank after removal:
+Account Number: 1002
+Account Holder: Jane Smith
+Balance: $6000.0
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+                Write a Java program to create class called "TrafficLight" with attributes for color and duration, and methods to change the color and check for red or green
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    public class TrafficLight {
+                        private String color;
+                        private int duration; // in seconds
+                    
+                        // Constructor to initialize the attributes
+                        public TrafficLight(String color, int duration) {
+                            this.color = color;
+                            this.duration = duration;
+                        }
+                    
+                        // Getter method for color
+                        public String getColor() {
+                            return color;
+                        }
+                    
+                        // Getter method for duration
+                        public int getDuration() {
+                            return duration;
+                        }
+                    
+                        // Method to change the color of the traffic light
+                        public void changeColor(String newColor) {
+                            color = newColor;
+                            System.out.println("Traffic light color changed to " + color);
+                        }
+                    
+                        // Method to check if the traffic light is currently red
+                        public boolean isRed() {
+                            return color.equalsIgnoreCase("red");
+                        }
+                    
+                        // Method to check if the traffic light is currently green
+                        public boolean isGreen() {
+                            return color.equalsIgnoreCase("green");
+                        }
+                    
+                        public static void main(String[] args) {
+                            // Create an instance of the TrafficLight class
+                            TrafficLight trafficLight = new TrafficLight("red", 60);
+                    
+                            // Display initial information about the traffic light
+                            System.out.println("Traffic Light Information:");
+                            System.out.println("Current Color: " + trafficLight.getColor());
+                            System.out.println("Duration: " + trafficLight.getDuration() + " seconds");
+                            System.out.println();
+                    
+                            // Change the color of the traffic light to green
+                            trafficLight.changeColor("green");
+                    
+                            // Display updated information about the traffic light
+                            System.out.println("\nTraffic Light Information after Color Change:");
+                            System.out.println("Current Color: " + trafficLight.getColor());
+                            System.out.println("Duration: " + trafficLight.getDuration() + " seconds");
+                            System.out.println();
+                    
+                            // Check if the traffic light is currently red or green
+                            System.out.println("Is the traffic light currently red? " + trafficLight.isRed());
+                            System.out.println("Is the traffic light currently green? " + trafficLight.isGreen());
+                        }
+                    }
+                    
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Traffic Light Information:
+Current Color: red
+Duration: 60 seconds
+
+Traffic light color changed to green
+
+Traffic Light Information after Color Change:
+Current Color: green
+Duration: 60 seconds
+
+Is the traffic light currently red? false
+Is the traffic light currently green? true
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+
+               Write a Java program to create a class called "Employee" with a name, salary, and hire date attributes, and a method to calculate years of service.
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    import java.time.LocalDate;
+import java.time.Period;
+
+public class Employee {
+    private String name;
+    private double salary;
+    private LocalDate hireDate;
+
+    // Constructor to initialize the attributes
+    public Employee(String name, double salary, int hireYear, int hireMonth, int hireDay) {
+        this.name = name;
+        this.salary = salary;
+        this.hireDate = LocalDate.of(hireYear, hireMonth, hireDay);
+    }
+
+    // Getter method for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter method for salary
+    public double getSalary() {
+        return salary;
+    }
+
+    // Getter method for hire date
+    public LocalDate getHireDate() {
+        return hireDate;
+    }
+
+    // Method to calculate years of service
+    public int calculateYearsOfService() {
+        LocalDate currentDate = LocalDate.now();
+        Period period = Period.between(hireDate, currentDate);
+        return period.getYears();
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the Employee class
+        Employee employee = new Employee("John Doe", 60000.0, 2010, 5, 15);
+
+        // Display information about the employee
+        System.out.println("Employee Information:");
+        System.out.println("Name: " + employee.getName());
+        System.out.println("Salary: $" + employee.getSalary());
+        System.out.println("Hire Date: " + employee.getHireDate());
+        System.out.println();
+
+        // Calculate and display years of service
+        int yearsOfService = employee.calculateYearsOfService();
+        System.out.println("Years of Service: " + yearsOfService + " years");
+    }
+}
+
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Employee Information:
+Name: John Doe
+Salary: $60000.0
+Hire Date: 2010-05-15
+
+Years of Service: 13 years
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+                Write a Java program to create a class called "Student" with a name, grade, and courses attributes, and methods to add and remove courses.
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+    private String name;
+    private int grade;
+    private List<String> courses;
+
+    // Constructor to initialize the attributes
+    public Student(String name, int grade) {
+        this.name = name;
+        this.grade = grade;
+        this.courses = new ArrayList<>();
+    }
+
+    // Getter method for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter method for grade
+    public int getGrade() {
+        return grade;
+    }
+
+    // Getter method for courses
+    public List<String> getCourses() {
+        return courses;
+    }
+
+    // Method to add a course
+    public void addCourse(String course) {
+        courses.add(course);
+        System.out.println("Course added successfully: " + course);
+    }
+
+    // Method to remove a course
+    public void removeCourse(String course) {
+        if (courses.contains(course)) {
+            courses.remove(course);
+            System.out.println("Course removed successfully: " + course);
+        } else {
+            System.out.println("Course not found: " + course);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the Student class
+        Student student = new Student("Alice", 10);
+
+        // Display initial information about the student
+        System.out.println("Student Information:");
+        System.out.println("Name: " + student.getName());
+        System.out.println("Grade: " + student.getGrade());
+        System.out.println("Courses: " + student.getCourses());
+        System.out.println();
+
+        // Add courses
+        student.addCourse("Math");
+        student.addCourse("Science");
+        student.addCourse("English");
+
+        // Display information about the student after adding courses
+        System.out.println("\nStudent Information after Adding Courses:");
+        System.out.println("Name: " + student.getName());
+        System.out.println("Grade: " + student.getGrade());
+        System.out.println("Courses: " + student.getCourses());
+        System.out.println();
+
+        // Remove a course
+        student.removeCourse("Science");
+
+        // Display information about the student after removing a course
+        System.out.println("\nStudent Information after Removing a Course:");
+        System.out.println("Name: " + student.getName());
+        System.out.println("Grade: " + student.getGrade());
+        System.out.println("Courses: " + student.getCourses());
+    }
+}
+
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Student Information:
+Name: Alice
+Grade: 10
+Courses: []
+
+Course added successfully: Math
+Course added successfully: Science
+Course added successfully: English
+
+Student Information after Adding Courses:
+Name: Alice
+Grade: 10
+Courses: [Math, Science, English]
+
+Course removed successfully: Science
+
+Student Information after Removing a Course:
+Name: Alice
+Grade: 10
+Courses: [Math, English]
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr>
+        <details>
+            <summary>
+                Write a Java program to create a class called "Library" with a collection of books and methods to add and remove books.
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+                    import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Library {
+    private List<Book> books;
+
+    // Constructor to initialize the book collection
+    public Library() {
+        books = new ArrayList<>();
+    }
+
+    // Method to add a book to the collection
+    public void addBook(Book book) {
+        books.add(book);
+        System.out.println("Book added to the library.");
+    }
+
+    // Method to remove a book from the collection based on ISBN
+    public void removeBook(String isbn) {
+        Iterator<Book> iterator = books.iterator();
+        while (iterator.hasNext()) {
+            Book book = iterator.next();
+            if (book.getIsbn().equals(isbn)) {
+                iterator.remove();
+                System.out.println("Book removed from the library.");
+                return;
+            }
+        }
+        System.out.println("Book with ISBN " + isbn + " not found in the library.");
+    }
+
+    // Method to display all books in the collection
+    public void displayAllBooks() {
+        if (books.isEmpty()) {
+            System.out.println("The library has no books.");
+        } else {
+            System.out.println("Books in the library:");
+            for (Book book : books) {
+                book.displayBookInfo();
+            }
+        }
+    }
+
+    public static class Book {
+        private String title;
+        private String author;
+        private String isbn;
+
+        // Constructor to initialize the attributes
+        public Book(String title, String author, String isbn) {
+            this.title = title;
+            this.author = author;
+            this.isbn = isbn;
+        }
+
+        // Getter methods for title, author, and ISBN
+        public String getTitle() {
+            return title;
+        }
+
+        public String getAuthor() {
+            return author;
+        }
+
+        public String getIsbn() {
+            return isbn;
+        }
+
+        // Method to display book information
+        public void displayBookInfo() {
+            System.out.println("Title: " + title);
+            System.out.println("Author: " + author);
+            System.out.println("ISBN: " + isbn);
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a Library
+        Library library = new Library();
+
+        // Add books to the library
+        Book book1 = new Book("Java Programming", "John Doe", "123456789");
+        Book book2 = new Book("Python Basics", "Jane Smith", "987654321");
+
+        library.addBook(book1);
+        library.addBook(book2);
+
+        // Display all books in the library
+        System.out.println("Books in the library after adding:");
+        library.displayAllBooks();
+
+        // Remove a book from the library
+        library.removeBook("123456789");
+
+        // Display all books in the library after removal
+        System.out.println("\nBooks in the library after removal:");
+        library.displayAllBooks();
+    }
+}
+
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+Book added to the library.
+Book added to the library.
+Books in the library after adding:
+Books in the library:
+Title: Java Programming
+Author: John Doe
+ISBN: 123456789
+
+Title: Python Basics
+Author: Jane Smith
+ISBN: 987654321
+
+Book removed from the library.
+Books in the library after removal:
+The library has no books.
+
+    
+    
+                </pre>
+            </div>
+        </details>
+        </div>
+
+        </details>
+
+
+
+
+        <hr>
+        <hr><details>
+            <summary>
+
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr><details>
+            <summary>
+               
+               
+            </summary>
+    
+            <div>
+                <pre>
+    
+                    
+          
+     
+    
+    <center><h2><b> <u>OUTPUT</u></b></h2></center>
+    
+    <img src="" alt="" srcset="">
+    
+    
+                </pre>
+            </div>
+        </details>
+        <hr>
+        <hr>
+    
+    
+           
+           
+       
+                
+      
+ 
+
+
+
+
+
+
+
+
+ </body>
+
+
+
+
+
+</html>

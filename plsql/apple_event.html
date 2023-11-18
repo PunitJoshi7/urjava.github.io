@@ -1,0 +1,1376 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=submit] {
+            background-color: #161F6D;
+            border-radius: 20px;
+            color: white;
+            padding: 28px 45px;
+            text-decoration: dotted;
+            cursor: pointer;
+            text-align: center;
+            size: 100px;
+            font-size: x-large;
+
+        }
+
+        input[type=button] {
+            background-color: #161F6D;
+            border-radius: 15px;
+            color: white;
+            padding: 8px 5px;
+            text-decoration: dotted;
+            cursor: pointer;
+            text-align: center;
+            size: 20px;
+            font-size: 20px;
+
+        }
+
+        body {
+            text-align: left;
+            text-shadow: 45px;
+            background-color: #a5e8a7;
+            font-size: 20px;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #123C69;
+
+            /* Needed to position the navbar */
+            position: relative;
+            min-height: 900px;
+            border: black;
+            border-style: solid;
+
+            
+        }
+
+        details {
+            padding: 10px;
+            font-size: 28px;
+            color: black;
+            font-weight: 300;
+            color: #123C69;
+            background-color: bisque;
+        }
+
+        div {
+            border: 70px 70px 70px 70px;
+            border-color: #1F2;
+            padding: 10px;
+            background-color: rgb(52, 191, 92);
+            color: white;
+            margin-top: 40px;
+            margin-left: 40px;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: small;
+        }
+
+        h2{
+            background-color: azure;
+            color: rgba(242, 5, 5, 0.9);
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+
+    <center><h2><b> <u>DELEGATION EVENT MODEL</u></b></h2></center>
+
+    <details>
+
+        <summary>CLICK HERE TO SEE THE ENTIRE PROGRAM LIST..</summary>
+        <hr>
+        <div>
+    <details>
+        <summary>
+           
+            Java program to display some text in the frame using labels .
+        </summary>
+
+        <div>
+            <pre>
+                import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class TextDisplayFrame extends JFrame {
+
+    public TextDisplayFrame() {
+        // Set the title of the frame
+        setTitle("Text Display Frame");
+
+        // Create a label with the desired text
+        JLabel label = new JLabel("Hello, this is some text!");
+
+        // Set the font for the label
+        Font font = new Font("Arial", Font.PLAIN, 16);
+        label.setFont(font);
+
+        // Add the label to the frame
+        add(label);
+
+        // Set the size of the frame
+        setSize(400, 200);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the TextDisplayFrame
+        TextDisplayFrame textDisplayFrame = new TextDisplayFrame();
+
+        // Make the frame visible
+        textDisplayFrame.setVisible(true);
+    }
+}
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+</pre>
+
+</div>
+</details>
+<hr>
+<details>
+    <summary>
+        Java Program to Create Text Area and Password Field.
+       
+       
+    </summary>
+
+    <div>
+        <pre>
+
+            import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import javax.swing.JPasswordField;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.GridLayout;
+
+public class TextAreaPasswordFieldExample extends JFrame {
+
+    public TextAreaPasswordFieldExample() {
+        // Set the title of the frame
+        setTitle("Text Area and Password Field Example");
+
+        // Create a panel with a grid layout
+        JPanel panel = new JPanel(new GridLayout(3, 2));
+
+        // Create a label and a text area
+        JLabel textAreaLabel = new JLabel("Text Area:");
+        JTextArea textArea = new JTextArea();
+
+        // Create a label and a password field
+        JLabel passwordLabel = new JLabel("Password:");
+        JPasswordField passwordField = new JPasswordField();
+
+        // Add components to the panel
+        panel.add(textAreaLabel);
+        panel.add(textArea);
+        panel.add(passwordLabel);
+        panel.add(passwordField);
+
+        // Add the panel to the frame
+        add(panel);
+
+        // Set the size of the frame
+        setSize(300, 150);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the TextAreaPasswordFieldExample
+        TextAreaPasswordFieldExample frame = new TextAreaPasswordFieldExample();
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+
+            
+  
+
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+
+        </pre>
+    </div>
+</details>
+
+<hr>
+
+
+<details>
+    <summary>
+        Java Program to Create a Button and Display Image in the Frame when Clicked
+       
+       
+    </summary>
+
+    <div>
+        <pre>
+            import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ButtonImageExample extends JFrame {
+
+    public ButtonImageExample() {
+        // Set the title of the frame
+        setTitle("Button and Image Example");
+
+        // Create a button
+        JButton button = new JButton("Click Me");
+
+        // Create an image icon
+        ImageIcon imageIcon = new ImageIcon("path/to/your/image.png");  // Replace with the actual path to your image
+
+        // Add an action listener to the button
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Display the image in the frame
+                getContentPane().removeAll();  // Remove any existing components
+                getContentPane().add(button);  // Add the button back to the frame
+                getContentPane().add(new JLabel(imageIcon));  // Add the image to the frame
+                revalidate();  // Refresh the frame
+            }
+        });
+
+        // Add the button to the frame
+        add(button);
+
+        // Set the size of the frame
+        setSize(300, 200);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the ButtonImageExample
+        ButtonImageExample frame = new ButtonImageExample();
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+
+            
+  
+
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+        </pre>
+    </div>
+</details>
+<hr>
+<details>
+    <summary>
+        Java Program to Create 2 Radio Buttons and Display Selected Button Label
+       
+       
+    </summary>
+
+    <div>
+        <pre>
+
+            import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+import javax.swing.JLabel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class RadioButtonExample extends JFrame {
+
+    private JLabel resultLabel;
+
+    public RadioButtonExample() {
+        // Set the title of the frame
+        setTitle("Radio Button Example");
+
+        // Create radio buttons
+        JRadioButton radioButton1 = new JRadioButton("Option 1");
+        JRadioButton radioButton2 = new JRadioButton("Option 2");
+
+        // Create a button group to group the radio buttons
+        ButtonGroup buttonGroup = new ButtonGroup();
+        buttonGroup.add(radioButton1);
+        buttonGroup.add(radioButton2);
+
+        // Add action listener to the radio buttons
+        ActionListener radioListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Display the selected radio button label
+                resultLabel.setText("Selected Option: " + ((JRadioButton) e.getSource()).getText());
+            }
+        };
+
+        radioButton1.addActionListener(radioListener);
+        radioButton2.addActionListener(radioListener);
+
+        // Create a label to display the result
+        resultLabel = new JLabel("Selected Option: ");
+
+        // Add components to the frame
+        add(radioButton1);
+        add(radioButton2);
+        add(resultLabel);
+
+        // Set layout to null to manually position the components
+        setLayout(null);
+
+        // Set the bounds for the components
+        radioButton1.setBounds(20, 20, 100, 30);
+        radioButton2.setBounds(20, 60, 100, 30);
+        resultLabel.setBounds(20, 100, 200, 30);
+
+        // Set the size of the frame
+        setSize(300, 200);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the RadioButtonExample
+        RadioButtonExample frame = new RadioButtonExample();
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+
+            
+  
+
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+        </pre>
+    </div>
+</details>
+
+<hr>
+<details>
+    <summary>
+        Java Program to Handle KeyBoardEvent
+       
+       
+    </summary>
+
+    <div>
+        <pre>
+            import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class KeyListenerExample extends JFrame {
+
+    private JTextArea textArea;
+
+    public KeyListenerExample() {
+        // Set the title of the frame
+        setTitle("Key Listener Example");
+
+        // Create a JTextArea
+        textArea = new JTextArea();
+
+        // Add a KeyListener to the JTextArea
+        textArea.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                // Invoked when a key is typed (pressed and released)
+                // Display the typed key in the JTextArea
+                textArea.append("Typed: " + e.getKeyChar() + "\n");
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                // Invoked when a key is pressed
+                // Display the pressed key in the JTextArea
+                textArea.append("Pressed: " + KeyEvent.getKeyText(e.getKeyCode()) + "\n");
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                // Invoked when a key is released
+                // Display the released key in the JTextArea
+                textArea.append("Released: " + KeyEvent.getKeyText(e.getKeyCode()) + "\n");
+            }
+        });
+
+        // Add the JTextArea to the frame
+        add(textArea);
+
+        // Set the size of the frame
+        setSize(300, 200);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the KeyListenerExample
+        KeyListenerExample frame = new KeyListenerExample();
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+
+            
+  
+
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+        </pre>
+    </div>
+</details>
+<hr>
+<details>
+    <summary>
+        Java Program to Handle MouseEvent
+       
+       
+    </summary>
+
+    <div>
+        <pre>
+
+            import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+public class MouseEventExample extends JFrame {
+
+    private JLabel label;
+
+    public MouseEventExample() {
+        // Set the title of the frame
+        setTitle("Mouse Event Example");
+
+        // Create a JLabel
+        label = new JLabel("Move and click the mouse");
+
+        // Add a MouseListener and a MouseMotionListener to the JLabel
+        label.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                label.setText("Mouse Clicked at (" + e.getX() + ", " + e.getY() + ")");
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // Invoked when a mouse button is pressed
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // Invoked when a mouse button is released
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                label.setText("Mouse Entered");
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                label.setText("Mouse Exited");
+            }
+        });
+
+        label.addMouseMotionListener(new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                // Invoked when the mouse is dragged with a button down
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                label.setText("Mouse Moved at (" + e.getX() + ", " + e.getY() + ")");
+            }
+        });
+
+        // Add the JLabel to the frame
+        add(label);
+
+        // Set the size of the frame
+        setSize(300, 200);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the MouseEventExample
+        MouseEventExample frame = new MouseEventExample();
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+
+            
+  
+
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+        </pre>
+    </div>
+</details>
+<hr>
+<details>
+    <summary>
+        Java Program to Get and Set State and Get Label of a Check Box
+       
+    </summary>
+
+    <div>
+        <pre>
+            import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CheckBoxExample extends JFrame {
+
+    private JCheckBox checkBox;
+    private JLabel resultLabel;
+
+    public CheckBoxExample() {
+        // Set the title of the frame
+        setTitle("CheckBox Example");
+
+        // Create a checkbox
+        checkBox = new JCheckBox("Enable Feature");
+
+        // Create a label to display the result
+        resultLabel = new JLabel("Checkbox state: " + checkBox.isSelected());
+
+        // Create a button to toggle the checkbox state
+        JButton toggleButton = new JButton("Toggle Checkbox");
+        toggleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Toggle the checkbox state
+                checkBox.setSelected(!checkBox.isSelected());
+
+                // Update the label
+                updateLabel();
+            }
+        });
+
+        // Add components to the frame
+        add(checkBox);
+        add(resultLabel);
+        add(toggleButton);
+
+        // Set layout to null to manually position the components
+        setLayout(null);
+
+        // Set the bounds for the components
+        checkBox.setBounds(20, 20, 150, 30);
+        resultLabel.setBounds(20, 60, 200, 30);
+        toggleButton.setBounds(20, 100, 150, 30);
+
+        // Set the size of the frame
+        setSize(300, 200);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+
+        // Update the label initially
+        updateLabel();
+    }
+
+    private void updateLabel() {
+        // Update the label with the current checkbox state and label
+        resultLabel.setText("Checkbox state: " 
+
+
+            
+  
+
+
+<center><h2><b> <u>OUTPUT</u></b></h2></center>
+
+<img src="" alt="" srcset="">
+
+
+        </pre>
+    </div>
+</details>
+
+<hr>
+<details>
+    <summary>
+        Java Program to Create and Set Border to Push Buttons
+
+    </summary>
+    <div>
+        <pre>
+            import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+
+public class ButtonBorderExample extends JFrame {
+
+    public ButtonBorderExample() {
+        // Set the title of the frame
+        setTitle("Button Border Example");
+
+        // Create buttons with different borders
+        JButton button1 = new JButton("Line Border");
+        JButton button2 = new JButton("Bevel Border");
+        JButton button3 = new JButton("Etched Border");
+        JButton button4 = new JButton("Empty Border");
+
+        // Set different borders to the buttons
+        button1.setBorder(new LineBorder(Color.BLACK, 2));
+        button2.setBorder(new BevelBorder(BevelBorder.RAISED, Color.RED, Color.GREEN));
+        button3.setBorder(new EtchedBorder(EtchedBorder.LOWERED, Color.BLUE, Color.CYAN));
+        button4.setBorder(new EmptyBorder(10, 20, 10, 20));
+
+        // Add buttons to the frame
+        add(button1);
+        add(button2);
+        add(button3);
+        add(button4);
+
+        // Set layout to null to manually position the components
+        setLayout(null);
+
+        // Set the bounds for the buttons
+        button1.setBounds(20, 20, 150, 30);
+        button2.setBounds(20, 70, 150, 30);
+        button3.setBounds(20, 120, 150, 30);
+        button4.setBounds(20, 170, 150, 30);
+
+        // Set the size of the frame
+        setSize(200, 250);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the ButtonBorderExample
+        ButtonBorderExample frame = new ButtonBorderExample();
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+
+<hr>
+<details>
+    <summary>
+        Java Program to Display a Message in a New Frame
+
+    </summary>
+    <div>
+        <pre>
+            import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class NewFrameExample extends JFrame {
+
+    public NewFrameExample() {
+        // Set the title of the main frame
+        setTitle("Main Frame");
+
+        // Create a button
+        JButton openButton = new JButton("Open New Frame");
+
+        // Add an ActionListener to the button
+        openButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create and show a new frame when the button is clicked
+                displayNewFrame();
+            }
+        });
+
+        // Add the button to the main frame
+        add(openButton);
+
+        // Set layout to null to manually position the components
+        setLayout(null);
+
+        // Set the bounds for the button
+        openButton.setBounds(20, 20, 150, 30);
+
+        // Set the size of the main frame
+        setSize(200, 100);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the main frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    private void displayNewFrame() {
+        // Create a new frame
+        JFrame newFrame = new JFrame("New Frame");
+
+        // Create a label with the message
+        JLabel messageLabel = new JLabel("Hello! This is a message in a new frame.");
+
+        // Add the label to the new frame
+        newFrame.add(messageLabel);
+
+        // Set layout to null to manually position the components
+        newFrame.setLayout(null);
+
+        // Set the bounds for the label
+        messageLabel.setBounds(20, 20, 300, 30);
+
+        // Set the size of the new frame
+        newFrame.setSize(350, 100);
+
+        // Set the default close operation for the new frame
+        newFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        // Center the new frame on the screen
+        newFrame.setLocationRelativeTo(null);
+
+        // Make the new frame visible
+        newFrame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the NewFrameExample
+        NewFrameExample mainFrame = new NewFrameExample();
+
+        // Make the main frame visible
+        mainFrame.setVisible(true);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+<hr>
+<details>
+    <summary>
+        Java Program to Display Text in Different Fonts
+
+    </summary>
+    <div>
+        <pre>
+            import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class FontExample extends JFrame {
+
+    public FontExample() {
+        // Set the title of the frame
+        setTitle("Font Example");
+
+        // Create labels with different fonts
+        JLabel label1 = new JLabel("This is Arial font.");
+        JLabel label2 = new JLabel("This is Times New Roman font.");
+        JLabel label3 = new JLabel("This is Courier New font.");
+
+        // Set different fonts to the labels
+        Font fontArial = new Font("Arial", Font.PLAIN, 16);
+        Font fontTimesNewRoman = new Font("Times New Roman", Font.BOLD, 18);
+        Font fontCourierNew = new Font("Courier New", Font.ITALIC, 20);
+
+        label1.setFont(fontArial);
+        label2.setFont(fontTimesNewRoman);
+        label3.setFont(fontCourierNew);
+
+        // Add labels to the frame
+        add(label1);
+        add(label2);
+        add(label3);
+
+        // Set layout to null to manually position the components
+        setLayout(null);
+
+        // Set the bounds for the labels
+        label1.setBounds(20, 20, 300, 30);
+        label2.setBounds(20, 60, 300, 30);
+        label3.setBounds(20, 100, 300, 30);
+
+        // Set the size of the frame
+        setSize(350, 180);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Center the frame on the screen
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the FontExample
+        FontExample frame = new FontExample();
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+
+
+
+</div>
+</details>
+
+<center><h2><b> <u>APPLETS  </u></b></h2></center>
+<details>
+
+    <summary>CLICK HERE TO SEE THE ENTIRE PROGRAM LIST..</summary>
+    <hr>
+    <hr>
+    <div>
+<hr>
+<details>
+    <summary>
+        Create an applet showing the string "Hello World" which is embedded in the HTML page.
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class HelloWorldApplet extends Applet {
+
+    public void paint(Graphics g) {
+        // Display the string "Hello World" at coordinates (20, 20)
+        g.drawString("Hello World", 20, 20);
+    }
+}
+
+
+
+
+
+    </pre>
+</div>
+    
+</details><hr>
+<details>
+    <summary>
+        Create an applet showing the string "Hello World" which is executed by an appletviewer.
+
+
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class HelloWorldApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawString("Hello World", 20, 20);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details><hr>
+<details>
+    <summary>
+    Create an applet in Java to draw a circle.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class CircleApplet extends Applet {
+    public void paint(Graphics g) {
+        // Draw a circle with center at (50, 50) and radius 30
+        g.drawOval(20, 20, 60, 60);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+
+
+<hr>
+<details>
+    <summary>
+        Create an applet in Java to draw a polygon.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class PolygonApplet extends Applet {
+    public void paint(Graphics g) {
+        // Define the coordinates of the polygon
+        int[] xPoints = {50, 100, 150, 100};
+        int[] yPoints = {50, 150, 150, 100};
+        int nPoints = 4; // Number of points
+
+        // Draw the polygon
+        g.drawPolygon(xPoints, yPoints, nPoints);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+
+<hr>
+<details>
+    <summary>
+        Create an applet in Java to draw a rectangle.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class RectangleApplet extends Applet {
+
+    public void paint(Graphics g) {
+        // Draw a rectangle with the specified coordinates and dimensions
+        int x = 50;
+        int y = 50;
+        int width = 100;
+        int height = 50;
+
+        g.drawRect(x, y, width, height);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+
+<hr>
+<details>
+    <summary>
+        Create an applet in Java to draw a square.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class SquareApplet extends Applet {
+
+    public void paint(Graphics g) {
+        // Draw a square with the specified coordinates and dimensions
+        int x = 50;
+        int y = 50;
+        int size = 100;
+
+        g.drawRect(x, y, size, size);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+
+<hr>
+<details>
+    <summary>
+        Create an applet in Java to draw a 4 concentric circles.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class CirclesApplet extends Applet {
+
+    public void paint(Graphics g) {
+        // Draw four concentric circles with different radii
+        int centerX = 100;
+        int centerY = 100;
+
+        int radius1 = 20;
+        int radius2 = 40;
+        int radius3 = 60;
+        int radius4 = 80;
+
+        g.drawOval(centerX - radius1, centerY - radius1, 2 * radius1, 2 * radius1);
+        g.drawOval(centerX - radius2, centerY - radius2, 2 * radius2, 2 * radius2);
+        g.drawOval(centerX - radius3, centerY - radius3, 2 * radius3, 2 * radius3);
+        g.drawOval(centerX - radius4, centerY - radius4, 2 * radius4, 2 * radius4);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details><hr>
+<details>
+    <summary>
+        Create an applet in Java to draw a line.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+            import java.awt.Graphics;
+            
+            public class LineApplet extends Applet {
+            
+                public void paint(Graphics g) {
+                    // Draw a line with specified coordinates
+                    int x1 = 50;
+                    int y1 = 50;
+                    int x2 = 150;
+                    int y2 = 100;
+            
+                    g.drawLine(x1, y1, x2, y2);
+                }
+            }
+            
+            
+    </pre>
+</div>
+    
+</details><hr>
+<details>
+    <summary>
+        Create an applet in Java to draw a oval.
+        
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class OvalApplet extends Applet {
+
+    public void paint(Graphics g) {
+        // Draw an oval with specified coordinates and dimensions
+        int x = 50;
+        int y = 50;
+        int width = 100;
+        int height = 50;
+
+        g.drawOval(x, y, width, height);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details><hr>
+<details>
+    <summary>
+        Create an applet in Java to draw a arc.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+
+public class ArcApplet extends Applet {
+
+    public void paint(Graphics g) {
+        // Draw an arc with specified coordinates, dimensions, and angles
+        int x = 50;
+        int y = 50;
+        int width = 100;
+        int height = 100;
+        int startAngle = 45;  // Starting angle in degrees
+        int arcAngle = 90;    // Extent of the arc in degrees
+
+        g.drawArc(x, y, width, height, startAngle, arcAngle);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details><hr>
+<details>
+    <summary>
+        Create an applet in Java to change the background color.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+public class ColorChangeApplet extends Applet {
+
+    private Color backgroundColor;
+
+    public void init() {
+        // Set the initial background color
+        backgroundColor = Color.WHITE;
+
+        // Add a mouse listener to change the background color on mouse click
+        addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                // Toggle between red and blue background colors on each click
+                if (backgroundColor == Color.WHITE) {
+                    backgroundColor = Color.RED;
+                } else {
+                    backgroundColor = Color.BLUE;
+                }
+                repaint(); // Request the applet to be repainted
+            }
+        });
+    }
+
+    public void paint(Graphics g) {
+        // Set the background color
+        setBackground(backgroundColor);
+
+        // Draw a message on the applet
+        g.setColor(Color.BLACK);
+        g.drawString("Click to change background color", 20, 20);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+
+
+<hr>
+<details>
+    <summary>
+        Create an applet in Java to draw rounded rectangle.
+        
+
+    </summary>
+    <div>
+        <pre>
+            import java.applet.Applet;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+
+public class RoundedRectangleApplet extends Applet {
+
+    public void paint(Graphics g) {
+        // Cast Graphics to Graphics2D for advanced drawing operations
+        Graphics2D g2d = (Graphics2D) g;
+
+        // Enable antialiasing for smoother edges
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+        // Draw a rounded rectangle with specified coordinates, dimensions, and corner radius
+        int x = 50;
+        int y = 50;
+        int width = 100;
+        int height = 50;
+        int arcWidth = 20;
+        int arcHeight = 20;
+
+        g2d.drawRoundRect(x, y, width, height, arcWidth, arcHeight);
+    }
+}
+
+
+    </pre>
+</div>
+    
+</details>
+<hr>
+
+</div>
+</details>
+
+
+<!-- 
+<details>
+    <summary>
+        
+
+    </summary>
+    <div>
+        <pre>
+
+    </pre>
+</div>
+    
+</details>
+<hr>
+<details>
+    <summary>
+        
+
+    </summary>
+    <div>
+        <pre>
+
+    </pre>
+</div>
+    
+</details>
+<hr>
+<details>
+    <summary>
+        
+
+    </summary>
+    <div>
+        <pre>
+
+    </pre>
+</div>
+    
+</details> -->
+
+
+
+
+
+
+
+
+
+<!-- </div>
+</details> -->
+</body>
+</html>
+
+

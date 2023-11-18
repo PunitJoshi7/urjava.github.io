@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=submit] {
+            background-color: #161F6D;
+            border-radius: 20px;
+            color: white;
+            padding: 28px 45px;
+            text-decoration: dotted;
+            cursor: pointer;
+            text-align: center;
+            size: 100px;
+            font-size: x-large;
+
+        }
+
+        input[type=button] {
+            background-color: #161F6D;
+            border-radius: 15px;
+            color: white;
+            padding: 8px 5px;
+            text-decoration: dotted;
+            cursor: pointer;
+            text-align: center;
+            size: 20px;
+            font-size: 20px;
+
+        }
+
+        body {
+            text-align: left;
+            text-shadow: 45px;
+            background-color:#E3E2DF;
+            font-size: 20px;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #123C69;
+
+            /* Needed to position the navbar */
+            position: relative;
+            min-height: 580px;
+        }
+
+        details {
+            font-size: 28px;
+            color: black;
+            font-weight: 300;
+            color: #123C69;
+        }
+        div{
+            border: 70px 70px 70px 70px;
+            border-color: #1F2;
+            padding: 10px;
+            background-color: rgb(52, 191, 92);
+            color: white;
+            margin-top: 40px;
+            margin-left: 40px;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background-color: #1F2; font-style: italic; font-size: 50px; font-display:inherit; color: #065b56;">
+        "THE INTERFACE FOR JAVA PROGRAMS"
+    </h1>
+
+    <a href="/plsql/plsqlhome.html"> <input type="submit" value="MORE PROGRAMS" style="margin: right 30px;"></a>
+    <a href="/index.html"><input type="submit" value="HOME" style="margin: left 30px;"> </a>
+
+    <br>
+    <br>
+    <h1>THE JAVA PROGRAMMING </h1>
+    <p>There are various concepts that are covered in the following list of the programs .
+    <details>
+        <summary>
+        Java program to compute the sum of the first 100 prime numbers 
+        </summary>
+        <div>
+        <p>import java.util.*; <br>
+
+            public class primeno<br>
+            {<br>
+                public static vo<br>id main(String[] args){<br>
+            <br>
+                int sum=1;<br>
+                int ctr=0;<br>
+                int n=0;<br>
+                while(ctr<100)<br>
+            {<br>
+                n++;<br>
+                if(n%2!=0)<br>
+                {<br>
+                    if(is_prime(n))<br>
+                    {<br>
+                        sum+=n;<br>
+            
+                    }<br>
+                }<br>
+                ctr++;<br>
+            
+            
+            }    <br>
+            System.out.println("sum of the prime numbers till 100 is:"+sum);<br>
+            
+                
+            }<br>
+            
+            public static boolean is_prime(int n)<br>
+            {<br>
+                for (int i=3; i*i<=n; i+=2)<br>
+                {<br>
+                    if(n%i==0){<br>
+                        return false;<br>
+                    }<br>
+                }<br>
+            return true;<br>
+            }<br>
+            
+            
+            
+                }<br>
+        </p>
+        </div>
+    </details>
+<hr>
+    <details>
+        <summary>
+          Java program to swap the first and the last elemenent of an array and create a new array.
+
+        </summary>
+        <div> 
+        <p>
+            import java.util.Arrays;<br>
+
+public class swapno{<br>
+    public static void main(String[] args)<br>
+    {
+        int[] array_nums={20,30,34,12,10};<br>
+        System.out.println("Original Array:" +Arrays.toString(array_nums));<br>
+        int x=array_nums[0];<br>
+        array_nums[0]=array_nums[array_nums.length - 1];<br>
+        array_nums[array_nums.length - 1]=x;<br>
+        System.out.println("NEW ELEMENT AFTER SWPPING HT E FIRST AND LAST ELEMENT IS <br>
+        :" +Arrays.toString(array_nums));<br>
+
+
+    }
+}
+            
+        </p>
+    </div>
+    </details>
+<hr>
+    <details>
+        <summary>
+            Java program to convert the long to string.
+        </summary>
+        <div>
+        <p>
+            
+public class cnvtltostr {   <br>
+      
+     
+    public static void main(String args[]) <br>  
+    {   <br>
+      
+    
+        Long varLong = 999999999999L;<br>   
+      
+     
+        String str = varLong+" "; <br> 
+        
+        
+        System.out.println("Converted type : "+str.getClass().getName()); <br>
+      
+        System.out.println(str);   <br>
+    }   
+}
+            
+        </p>
+        </div>
+    </details>
+<hr>
+    <details>
+        <summary>Java program to print the character between two characters.</summary>
+        <div>
+       <p> 
+        public class printch {<br>
+            public static void main(String[] args) {<br>
+                 print_Chars('A', 'P', 20);<br>
+             }<br>
+          public static void print_Chars(char char1, char char2, int n)<br> {
+                 for (int ctr = 1; char1 <= char2; ctr++, char1++) <br>{
+                     System.out.print(char1 + " ");<br>
+                     if (ctr % n == 0) System.out.println("");<br>
+                 }<br>
+                 System.out.print("\n");<br>
+             }<br>
+         }<br>
+
+    </p>
+</div>
+    </details>
+<hr>
+    <details>
+        <summary>Java programs to perform the deep of the string..</summary>
+        <div>
+       <p>
+        import java.util.*;<br>
+
+public class st2deEp<br>
+{<br>
+    public static void main(String[] args)<br>
+    {<br>
+        int[] vals={3,7,33,56};<br>
+        Ex e=new Ex(vals);<br>
+        e.showData();<br>
+        vals[0]=13;<br>
+        e.showData;<br>
+        
+        
+        
+    }<br>
+}<br>
+    </p>
+    </div>
+    </details>
+<hr>
+    <details>
+        <summary>Java program to create a class called library with a collectoon of books 
+            and methods to add and remove books.</summary>
+            <div>
+       <p> 
+        import java.util.ArrayList;
+//Book.java
+public class Book {                                                  <br>
+  private String title;<br>
+  private String author;<br>
+<br>
+  public Book(String title, String author) {<br>
+    this.title = title;<br>
+    this.author = author;<br>
+  }<br>
+<br>
+  public String getTitle() {<br>
+    return title;<br>
+  }<br>
+<br>
+  public void setTitle(String title) {<br>
+    this.title = title;<br>
+  }<br>
+<br>
+  public String getAuthor() {<br>
+    return author;<br>
+  }<br>
+<br>
+  public void setAuthor(String author) {<br>
+    this.author = author;<br>
+  }<br>
+}<br>
+//Library.java<br>
+<br>
+public class Library {<br>
+  private ArrayList < Book > books;<br>
+<br>
+  public Library() {<br>
+    books = new ArrayList < Book > ();<br>
+  }<br>
+<br>
+  public void addBook(Book book) {<br>
+    books.add(book);<br>
+  }<br>
+<br>
+  public void removeBook(Book book) {<br>
+    books.remove(book);<br>
+  }<br>
+<br>
+  public ArrayList < Book > getBooks() {<br>
+    return books;<br>
+  }<br>
+}<br>
+//Main.java<br>
+public class Main {<br>
+  public static void main(String[] args) {<br>
+    Library library = new Library();<br>
+<br>
+    Book book1 = new Book("Adventures of Tom Sawyer", "Mark Twain");<br>
+    Book book2 = new Book("Ben Hur", "Lewis Wallace");<br>
+    Book book3 = new Book("Time Machine", "H.G. Wells");<br>
+    Book book4 = new Book("Anna Karenina", "Leo Tolstoy");<br>
+<br>
+    library.addBook(book1);<br>
+    library.addBook(book2);<br>
+    library.addBook(book3);<br>
+    library.addBook(book4);<br>
+<br>
+    System.out.println("Books in the library:");<br>
+    for (Book book: library.getBooks()) {<br>
+      System.out.println(book.getTitle() + " by " + book.getAuthor())<br>;
+    }<br>
+<br>
+    library.removeBook(book2);<br>
+    System.out.println("\nBooks in the library after removing " + boo<br>k2.getTitle() + ":");
+    for (Book book: library.getBooks()) {<br>
+      System.out.println(book.getTitle() + " by " + book.getAuthor())<br>;
+    }<br>
+  }<br>
+}<br>
+<br>
+    </p>
+</div>
+    </details>
+<hr>
+    <details>
+        <summary>
+    Java program to display seversl dots on the screen.
+
+</summary>
+<div>    
+       <p>
+        import javax.swing.*;                                                  <br>
+import java.awt.*;<br>
+import java.lang.Math;<br>
+import java.awt.Graphics.*;<br>
+class dispdots {<br>
+  //Driver function<br>
+  public static void main(String args[]) {<br>
+    //Create a frame<br>
+    JFrame frame = new JFrame("Infinite Dots");<br>
+    frame.setSize(500, 500);<br>
+    frame.getContentPane().setBackground(Color.black);<br>
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br>
+    frame.setVisible(true);<br>
+    /*Draw the dots on frame continuously using method paint <br>
+                  until the user closes the frame*/<br>
+    while (frame.isVisible()) {<br>
+      paint(frame.getGraphics());<br>
+      try {<br>
+        //Delay by 1ms<br>
+        Thread.sleep(1);<br>
+      } catch (InterruptedException ie) {}<br>
+    }<br>
+  }<br>
+  //function to draw a dot on the frame<br>
+  public static void paint(Graphics g) {<br>
+    g.setColor(Color.green);<br>
+    int x = (int)(Math.random() * 1000) % 500;<br>
+    int y = (int)(Math.random() * 1000) % 500;<br>
+    g.drawLine(x, y, x, y);<br>
+  }<br>
+}<br>
+
+    </p>
+</div>
+
+    </details>
+<hr>
+    <details>
+        <summary>
+    Create a simple awt application that displays checkbox group with flow layout manager.
+
+</summary>
+<div>        <p>
+    import java.awt.*;                                                   <br>
+public class awtappl   extends Frame  <br>
+{    <br>
+       awtappl(){    <br>
+       Frame f= new Frame("CheckboxGroup Example");    <br>
+        CheckboxGroup cbg = new CheckboxGroup();  <br>
+        Checkbox checkBox1 = new Checkbox("C++", cbg, false);    <br>
+        checkBox1.setBounds(100,100, 50,50);    <br>
+        Checkbox checkBox2 = new Checkbox("Java", cbg, true);    <br>
+        checkBox2.setBounds(100,150, 50,50);    <br>
+        f.add(checkBox1);    <br>
+        f.add(checkBox2);    <br>
+        f.setSize(400,400);    <br>
+        f.setLayout(null);    <br>
+        f.setVisible(true);    <br>
+     }    <br>
+public static void main(String args[])    <br>
+{    <br>
+    new awtappl();    <br>
+}    <br>
+}  <br>
+           <br>
+<br>
+        </p>
+    </div>
+
+
+    </details>
+<hr>
+  <details>
+        <summary>
+            Java program to draw the arc.
+            </summary>
+        <div>
+            <p>
+                import java.applet.applet;         <br>
+import java.awt;<br>
+<br>
+import java.awt.color;<br>
+import java.awt.Graphics;<br>
+<br>
+public class applletarc<br>
+{<br>
+    public void paint(Graphics g){<br>
+        setForeground(Color.red);<br>
+        g.drawArc(10,10,50,100,10,45);<br>
+        g.fillArc(100,10,1000,100,0,90);<br>
+<br>
+    }<br>
+}<br>
+
+
+
+            </p>
+    </div>
+    </details>
+<hr>
+
+
+
+
+<details>
+    <summary>
+    Java program to compute the sum of the first 100 prime numbers 
+    </summary>
+    <div>
+    <p>import java.util.*; <br>
+
+        public class primeno<br>
+        {<br>
+            public static vo<br>id main(String[] args){<br>
+        <br>
+            int sum=1;<br>
+            int ctr=0;<br>
+            int n=0;<br>
+            while(ctr<100)<br>
+        {<br>
+            n++;<br>
+            if(n%2!=0)<br>
+            {<br>
+                if(is_prime(n))<br>
+                {<br>
+                    sum+=n;<br>
+        
+                }<br>
+            }<br>
+            ctr++;<br>
+        
+        
+        }    <br>
+        System.out.println("sum of the prime numbers till 100 is:"+sum);<br>
+        
+            
+        }<br>
+        
+        public static boolean is_prime(int n)<br>
+        {<br>
+            for (int i=3; i*i<=n; i+=2)<br>
+            {<br>
+                if(n%i==0){<br>
+                    return false;<br>
+                }<br>
+            }<br>
+        return true;<br>
+        }<br>
+        
+        
+        
+            }<br>
+    </p>
+    </div>
+</details>
+<hr>
+<details>
+    <summary>
+      Java program to swap the first and the last elemenent of an array and create a new array.
+
+    </summary>
+    <div> 
+    <p>
+        import java.util.Arrays;<br>
+
+public class swapno{<br>
+public static void main(String[] args)<br>
+{
+    int[] array_nums={20,30,34,12,10};<br>
+    System.out.println("Original Array:" +Arrays.toString(array_nums));<br>
+    int x=array_nums[0];<br>
+    array_nums[0]=array_nums[array_nums.length - 1];<br>
+    array_nums[array_nums.length - 1]=x;<br>
+    System.out.println("NEW ELEMENT AFTER SWPPING HT E FIRST AND LAST ELEMENT IS <br>
+    :" +Arrays.toString(array_nums));<br>
+
+
+}
+}
+        
+    </p>
+</div>
+</details>
+<hr>
+<details>
+    <summary>
+        Java program to find the area of the equilateral triangle.
+    </summary>
+    <div>
+    <p>
+        
+public class cnvtltostr {   <br>
+  
+ 
+public static void main(String args[]) <br>  
+{   <br>
+  
+
+    Long varLong = 999999999999L;<br>   
+  
+ 
+    String str = varLong+" "; <br> 
+    
+    
+    System.out.println("Converted type : "+str.getClass().getName()); <br>
+  
+    System.out.println(str);   <br>
+}   
+}
+        
+    </p>
+    </div>
+</details>
+<hr>
+<details>
+    <summary>Java program to find the area of the rectangle.</summary>
+    <div>
+   <p> 
+    public class printch {<br>
+        public static void main(String[] args) {<br>
+             print_Chars('A', 'P', 20);<br>
+         }<br>
+      public static void print_Chars(char char1, char char2, int n)<br> {
+             for (int ctr = 1; char1 <= char2; ctr++, char1++) <br>{
+                 System.out.print(char1 + " ");<br>
+                 if (ctr % n == 0) System.out.println("");<br>
+             }<br>
+             System.out.print("\n");<br>
+         }<br>
+     }<br>
+
+</p>
+</div>
+</details>
+<hr>
+<details>
+    <summary>Java program to find the surface area of the cylinder.</summary>
+    <div>
+   <p>
+    import java.util.*;<br>
+
+public class st2deEp<br>
+{<br>
+public static void main(String[] args)<br>
+{<br>
+    int[] vals={3,7,33,56};<br>
+    Ex e=new Ex(vals);<br>
+    e.showData();<br>
+    vals[0]=13;<br>
+    e.showData;<br>
+    
+    
+    
+}<br>
+}<br>
+</p>
+</div>
+</details>
+<hr>
+<details>
+    <summary>Java program to find the surface area of the prism.</summary>
+        <div>
+   <p> 
+    import java.util.ArrayList;
+//Book.java
+public class Book {                                                  <br>
+private String title;<br>
+private String author;<br>
+<br>
+public Book(String title, String author) {<br>
+this.title = title;<br>
+this.author = author;<br>
+}<br>
+<br>
+public String getTitle() {<br>
+return title;<br>
+}<br>
+<br>
+public void setTitle(String title) {<br>
+this.title = title;<br>
+}<br>
+<br>
+public String getAuthor() {<br>
+return author;<br>
+}<br>
+<br>
+public void setAuthor(String author) {<br>
+this.author = author;<br>
+}<br>
+}<br>
+//Library.java<br>
+<br>
+public class Library {<br>
+private ArrayList < Book > books;<br>
+<br>
+public Library() {<br>
+books = new ArrayList < Book > ();<br>
+}<br>
+<br>
+public void addBook(Book book) {<br>
+books.add(book);<br>
+}<br>
+<br>
+public void removeBook(Book book) {<br>
+books.remove(book);<br>
+}<br>
+<br>
+public ArrayList < Book > getBooks() {<br>
+return books;<br>
+}<br>
+}<br>
+//Main.java<br>
+public class Main {<br>
+public static void main(String[] args) {<br>
+Library library = new Library();<br>
+<br>
+Book book1 = new Book("Adventures of Tom Sawyer", "Mark Twain");<br>
+Book book2 = new Book("Ben Hur", "Lewis Wallace");<br>
+Book book3 = new Book("Time Machine", "H.G. Wells");<br>
+Book book4 = new Book("Anna Karenina", "Leo Tolstoy");<br>
+<br>
+library.addBook(book1);<br>
+library.addBook(book2);<br>
+library.addBook(book3);<br>
+library.addBook(book4);<br>
+<br>
+System.out.println("Books in the library:");<br>
+for (Book book: library.getBooks()) {<br>
+  System.out.println(book.getTitle() + " by " + book.getAuthor())<br>;
+}<br>
+<br>
+library.removeBook(book2);<br>
+System.out.println("\nBooks in the library after removing " + boo<br>k2.getTitle() + ":");
+for (Book book: library.getBooks()) {<br>
+  System.out.println(book.getTitle() + " by " + book.getAuthor())<br>;
+}<br>
+}<br>
+}<br>
+<br>
+</p>
+</div>
+</details>
+<hr>
+<details>
+    <summary>
+Java program to display seversl dots on the screen.
+
+</summary>
+<div>    
+   <p>
+    import javax.swing.*;                                                  <br>
+import java.awt.*;<br>
+import java.lang.Math;<br>
+import java.awt.Graphics.*;<br>
+class dispdots {<br>
+//Driver function<br>
+public static void main(String args[]) {<br>
+//Create a frame<br>
+JFrame frame = new JFrame("Infinite Dots");<br>
+frame.setSize(500, 500);<br>
+frame.getContentPane().setBackground(Color.black);<br>
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br>
+frame.setVisible(true);<br>
+/*Draw the dots on frame continuously using method paint <br>
+              until the user closes the frame*/<br>
+while (frame.isVisible()) {<br>
+  paint(frame.getGraphics());<br>
+  try {<br>
+    //Delay by 1ms<br>
+    Thread.sleep(1);<br>
+  } catch (InterruptedException ie) {}<br>
+}<br>
+}<br>
+//function to draw a dot on the frame<br>
+public static void paint(Graphics g) {<br>
+g.setColor(Color.green);<br>
+int x = (int)(Math.random() * 1000) % 500;<br>
+int y = (int)(Math.random() * 1000) % 500;<br>
+g.drawLine(x, y, x, y);<br>
+}<br>
+}<br>
+
+</p>
+</div>
+
+</details>
+<hr>
+<details>
+    <summary>
+Java program to find the surface area of the cube.
+</summary>
+<div>        <p>
+import java.awt.*;                                                   <br>
+public class awtappl   extends Frame  <br>
+{    <br>
+   awtappl(){    <br>
+   Frame f= new Frame("CheckboxGroup Example");    <br>
+    CheckboxGroup cbg = new CheckboxGroup();  <br>
+    Checkbox checkBox1 = new Checkbox("C++", cbg, false);    <br>
+    checkBox1.setBounds(100,100, 50,50);    <br>
+    Checkbox checkBox2 = new Checkbox("Java", cbg, true);    <br>
+    checkBox2.setBounds(100,150, 50,50);    <br>
+    f.add(checkBox1);    <br>
+    f.add(checkBox2);    <br>
+    f.setSize(400,400);    <br>
+    f.setLayout(null);    <br>
+    f.setVisible(true);    <br>
+ }    <br>
+public static void main(String args[])    <br>
+{    <br>
+new awtappl();    <br>
+}    <br>
+}  <br>
+       <br>
+<br>
+    </p>
+</div>
+
+
+</details>
+<hr>
+<details>
+    <summary>
+Java program to find the surface area of the cubiod.
+
+        </summary>
+    <div>
+        <p>
+            import java.applet.applet;         <br>
+import java.awt;<br>
+<br>
+import java.awt.color;<br>
+import java.awt.Graphics;<br>
+<br>
+public class applletarc<br>
+{<br>
+public void paint(Graphics g){<br>
+    setForeground(Color.red);<br>
+    g.drawArc(10,10,50,100,10,45);<br>
+    g.fillArc(100,10,1000,100,0,90);<br>
+<br>
+}<br>
+}<br>
+
+
+
+        </p>
+</div>
+</details>
+<hr>
+<details>
+    <summary>
+Java program to find the  factorial of any number.
+
+        </summary>
+    <div>
+        <p>
+            import java.applet.applet;         <br>
+import java.awt;<br>
+<br>
+import java.awt.color;<br>
+import java.awt.Graphics;<br>
+<br>
+public class applletarc<br>
+{<br>
+public void paint(Graphics g){<br>
+    setForeground(Color.red);<br>
+    g.drawArc(10,10,50,100,10,45);<br>
+    g.fillArc(100,10,1000,100,0,90);<br>
+<br>
+}<br>
+}<br>
+
+
+
+        </p>
+</div>
+</details>
+<hr>
+
+
+
+
+
+
+
+    <details>
+        <summary>
+            </summary>
+        <div>
+            <p>
+                
+            </p>
+    </div>
+    </details>
+<hr>
+
+
+
+
+
+
+   
+
+
+
+</body>
+
+</html>
